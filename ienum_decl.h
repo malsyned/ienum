@@ -14,18 +14,13 @@
  */
 
 #include <stdlib.h>
+#include "pputil.h"
 
-#define concat(a, b) a ## b
-#define econcat(a, b) concat(a, b)
+#define IENUM_MEMBER_BODY(x) econcat(IENUM_NAME, concat(_, x)),
 
-#define stringify(a) #a
-#define estringify(a) stringify(a)
-
-#define MEMBER_BODY(x) econcat(IENUM_NAME, econcat(_, x)),
-
-#define IENUM MEMBER_BODY
+#define IENUM IENUM_MEMBER_BODY
 enum {
-IENUM_MEMBERS
+    IENUM_MEMBERS
 } IENUM_NAME;
 #undef IENUM
 
