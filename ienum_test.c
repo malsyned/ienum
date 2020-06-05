@@ -13,6 +13,7 @@ int main(void)
            my_enum_names[my_enum_foo],
            my_enum_names[my_enum_bar],
            my_enum_names[my_enum_baz]);
+    printf("\n");
 
     printf("%s has %zd members\n", other_enum_name, other_enum_count);
     for (i = 0; i < other_enum_count; i++) {
