@@ -9,6 +9,7 @@
       1) Include your header file
       2) Include "ienum_def.h"
 
+   NOTE: You can only create ienums that increase sequentially from 0
    NOTE: You can only declare one introspectable enumeration per file
    this way.
  */
