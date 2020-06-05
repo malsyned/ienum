@@ -16,9 +16,7 @@
 #include "ienum.h"
 #include "pputil.h"
 
-#define IENUM_MEMBER_BODY(x) econcat(IENUM_NAME, concat(_, x)),
-
-#define IENUM IENUM_MEMBER_BODY
+#define IENUM(x) econcat(IENUM_NAME, concat(_, x)),
 enum IENUM_NAME {
     IENUM_MEMBERS
 };
