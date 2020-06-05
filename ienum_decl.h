@@ -19,6 +19,10 @@
 #define IENUM(x) econcat(IENUM_NAME, concat(_, x)),
 enum IENUM_NAME {
     IENUM_MEMBERS
+#if (__STDC_VERSION__ < 199901L)
+    /* For C89 compliance, makes sure enum isn't comma-terminated */
+    econcat(IENUM_NAME, _DUMMY) = 0
+#endif
 };
 #undef IENUM
 
