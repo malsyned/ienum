@@ -13,17 +13,15 @@
    this way.
  */
 
-#include <stdlib.h>
+#include "ienum.h"
 #include "pputil.h"
 
 #define IENUM_MEMBER_BODY(x) econcat(IENUM_NAME, concat(_, x)),
 
 #define IENUM IENUM_MEMBER_BODY
-enum {
+enum IENUM_NAME {
     IENUM_MEMBERS
-} IENUM_NAME;
+};
 #undef IENUM
 
-extern const char *econcat(IENUM_NAME, _name);
-extern const char *econcat(IENUM_NAME, _names)[];
-extern const size_t econcat(IENUM_NAME, _count);
+extern const struct ienum IENUM_NAME;
