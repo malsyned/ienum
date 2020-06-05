@@ -16,14 +16,15 @@
 #include "ienum.h"
 #include "pputil.h"
 
-#define IENUM(x) econcat(IENUM_NAME, concat(_, x)),
 enum IENUM_NAME {
+#define IENUM(x) econcat(IENUM_NAME, concat(_, x)),
     IENUM_MEMBERS
+#undef IENUM
+
 #if (__STDC_VERSION__ < 199901L)
     /* For C89 compliance, makes sure enum isn't comma-terminated */
     econcat(IENUM_NAME, _DUMMY) = 0
 #endif
 };
-#undef IENUM
 
 extern const struct ienum IENUM_NAME;
