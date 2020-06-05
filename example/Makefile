@@ -1,8 +1,9 @@
 TARGET := ienum_example
 SRC := \
-       $(TARGET).c \
        my_enum.c \
-       other_enum.c
+       other_enum.c \
+       third_enum.c \
+       $(TARGET).c
 
 CFLAGS += -I..
 

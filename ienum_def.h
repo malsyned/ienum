@@ -3,7 +3,11 @@
 #define IENUM_NAMES_ARRAY_NAME IENUM_ECONCAT(IENUM_NAME, _names)
 
 static const char *IENUM_NAMES_ARRAY_NAME[] = {
-#define IENUM(x) (IENUM_ESTRINGIFY(IENUM_NAME) "::" #x),
+#if defined(IENUM_SEP)
+# define IENUM(x) (IENUM_ESTRINGIFY(IENUM_NAME) IENUM_SEP #x),
+#else
+# define IENUM(x) (#x),
+#endif
     IENUM_MEMBERS
 #undef IENUM
 };

@@ -9,6 +9,7 @@
     IENUM(foo)                                  \
     IENUM(bar)                                  \
     IENUM(quux)
+
 #include "ienum_decl.h"
 
 #endif /* !OTHER_ENUM_H */

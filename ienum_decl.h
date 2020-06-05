@@ -7,8 +7,14 @@
       4) Include "ienum_decl.h"
    II. Create a C file for your enumeration
       1) Include your header file
-      2) Include "ienum_def.h"
+      2) Optionally define IENUM_SEP to a string to use to separate
+         the enum name from member names in the member name
+         strings. If IENUM_SEP is left undefined, member names will
+         not be prefixed with their enum name.
+      3) Include "ienum_def.h"
 
+   NOTE: IENUM_SEP can also be configured site-wide by passing its
+         definition in on the compile command line via build scripts.
    NOTE: You can only create ienums that increase sequentially from 0
    NOTE: You can only declare one introspectable enumeration per file
    this way.
