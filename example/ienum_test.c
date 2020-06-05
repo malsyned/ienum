@@ -5,7 +5,7 @@
 
 int main(void)
 {
-    int i;
+    enum other_enum i;
 
     printf("%s has %d members: %s %s %s\n",
            my_enum.name,
