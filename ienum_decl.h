@@ -14,16 +14,15 @@
  */
 
 #include "ienum.h"
-#include "pputil.h"
 
 enum IENUM_NAME {
-#define IENUM(x) econcat(IENUM_NAME, concat(_, x)),
+#define IENUM(x) IENUM_ECONCAT(IENUM_NAME, IENUM_CONCAT(_, x)),
     IENUM_MEMBERS
 #undef IENUM
 
-#if (__STDC_VERSION__ < 199901L)
+#if !defined(__STDC_VERSION__) || (__STDC_VERSION__ < 199901L)
     /* For C89 compliance, makes sure enum isn't comma-terminated */
-    econcat(IENUM_NAME, _DUMMY) = 0
+    IENUM_ECONCAT(IENUM_NAME, _DUMMY) = 0
 #endif
 };
 
