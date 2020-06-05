@@ -1,4 +1,4 @@
-TARGET := ienum_test
+TARGET := ienum_example
 SRC := \
        $(TARGET).c \
        my_enum.c \
