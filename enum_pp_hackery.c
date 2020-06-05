@@ -1,10 +1,6 @@
 #include <stdio.h>
 
-#define IENUM_NAME my_enum
-#define IENUM_HEADER "ienum_my_enum.h"
-#include "ienum_create.h"
-#undef IENUM_NAME
-#undef IENUM_HEADER
+#include "my_enum.h"
 
 int main(void)
 {
