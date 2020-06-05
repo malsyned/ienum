@@ -1,3 +1,4 @@
 ienum_test
 *.i
 *.o
+*.d
