@@ -3,7 +3,7 @@
       1) Undefine IENUM_NAME and IENUM_MEMBERS
       2) Define IENUM_NAME to the C identifier prefix for your enum
       3) Define IENUM_MEMBERS to a sequence of calls to IENUM() with
-      the identifiers for your enumeration, without the prefix
+         the identifiers for your enumeration, without the prefix
       4) Include "ienum_decl.h"
    II. Create a C file for your enumeration
       1) Include your header file
