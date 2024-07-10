@@ -1,8 +1,7 @@
 #ifndef THIRD_ENUM_H
 #define THIRD_ENUM_H
 
-#undef IENUM_NAME
-#undef IENUM_MEMBERS
+#include "ienum_start.h"
 #define IENUM_NAME third_enum
 #define IENUM_MEMBERS                           \
     IENUM(some)                                 \

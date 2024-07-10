@@ -1,8 +1,7 @@
 #ifndef OTHER_ENUM_H
 #define OTHER_ENUM_H
 
-#undef IENUM_NAME
-#undef IENUM_MEMBERS
+#include "ienum_start.h"
 #define IENUM_NAME other_enum
 #define IENUM_MEMBERS                           \
     IENUM(baz)                                  \

@@ -29,16 +29,17 @@ To create an introspectable enumeration, you will need a `.c`/`.h` file pair for
 
 ## Populating the `.h` file ##
 
-Your C header file for your enumeration should start with standard multiple-include guards
+Your C header file for your enumeration should start with standard multiple-include guards and an `#include` directive for *"ienum_start.h"*.
 ```C
     #ifndef FOO_H
     #define FOO_H
+
+    #include "ienum_start.h"
 ```
 
-Then undefine `IENUM_NAME` and `IENUM_MEMBERS` to prevent warnings if multiple introspectable enumeration headers are included in a single source file. Then, define `IENUM_NAME` as the C identifier that names your enum, and `IENUM_MEMBERS` as a whitespace-separated list of value names, surrounded by a call to the `IENUM()` macro:
+Then, define `IENUM_NAME` as the C identifier that names your enum, and `IENUM_MEMBERS` as a whitespace-separated list of value names, surrounded by a call to the `IENUM()` macro:
 ```C
-    #undef IENUM_NAME
-    #undef IENUM_MEMBERS
+
     #define IENUM_NAME foo
     #define IENUM_MEMBERS  \
                 IENUM(bar) \
