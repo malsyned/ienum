@@ -21,6 +21,8 @@ member|description
 
 NOTE: **ienum** is currently limited to creating enumerations whose members start at 0 and go up sequentially.
 
+[//]: # (This is because names in the names array are looked up by value and populated sequentially. We might need to grow a hash table implementation if we wanted more flexibility around this without either risking massive amounts of wasted space or name lookups that are linear on the value being looked up.)
+
 # Using #
 
 To create an introspectable enumeration, you will need a `.c`/`.h` file pair for it. Note that **ienum** only supports one introspectable enumeration per file.
